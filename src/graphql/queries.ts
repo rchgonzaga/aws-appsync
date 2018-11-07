@@ -5,7 +5,7 @@ export const getAuction = `query GetAuction($id: ID!) {
   getAuction(id: $id) {
     id
     name
-    price
+    description
   }
 }
 `;
@@ -18,7 +18,7 @@ export const listAuctions = `query ListAuctions(
     items {
       id
       name
-      price
+      description
     }
     nextToken
   }
