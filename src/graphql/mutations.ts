@@ -5,6 +5,7 @@ export const createAuction = `mutation CreateAuction($input: CreateAuctionInput!
   createAuction(input: $input) {
     id
     name
+    price
     description
   }
 }
@@ -13,6 +14,7 @@ export const updateAuction = `mutation UpdateAuction($input: UpdateAuctionInput!
   updateAuction(input: $input) {
     id
     name
+    price
     description
   }
 }
@@ -21,6 +23,7 @@ export const deleteAuction = `mutation DeleteAuction($input: DeleteAuctionInput!
   deleteAuction(input: $input) {
     id
     name
+    price
     description
   }
 }

@@ -4,12 +4,14 @@
 export type CreateAuctionInput = {
   id?: string | null,
   name: string,
+  price: number,
   description?: string | null,
 };
 
 export type UpdateAuctionInput = {
   id: string,
   name?: string | null,
+  price?: number | null,
   description?: string | null,
 };
 
@@ -20,6 +22,7 @@ export type DeleteAuctionInput = {
 export type ModelAuctionFilterInput = {
   id?: ModelIDFilterInput | null,
   name?: ModelStringFilterInput | null,
+  price?: ModelFloatFilterInput | null,
   description?: ModelStringFilterInput | null,
   and?: Array< ModelAuctionFilterInput | null > | null,
   or?: Array< ModelAuctionFilterInput | null > | null,
@@ -52,6 +55,18 @@ export type ModelStringFilterInput = {
   beginsWith?: string | null,
 };
 
+export type ModelFloatFilterInput = {
+  ne?: number | null,
+  eq?: number | null,
+  le?: number | null,
+  lt?: number | null,
+  ge?: number | null,
+  gt?: number | null,
+  contains?: number | null,
+  notContains?: number | null,
+  between?: Array< number | null > | null,
+};
+
 export type CreateAuctionMutationVariables = {
   input: CreateAuctionInput,
 };
@@ -61,6 +76,7 @@ export type CreateAuctionMutation = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -74,6 +90,7 @@ export type UpdateAuctionMutation = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -87,6 +104,7 @@ export type DeleteAuctionMutation = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -100,6 +118,7 @@ export type GetAuctionQuery = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -117,6 +136,7 @@ export type ListAuctionsQuery = {
       __typename: "Auction",
       id: string,
       name: string,
+      price: number,
       description: string | null,
     } | null > | null,
     nextToken: string | null,
@@ -128,6 +148,7 @@ export type OnCreateAuctionSubscription = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -137,6 +158,7 @@ export type OnUpdateAuctionSubscription = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
@@ -146,6 +168,7 @@ export type OnDeleteAuctionSubscription = {
     __typename: "Auction",
     id: string,
     name: string,
+    price: number,
     description: string | null,
   } | null,
 };
