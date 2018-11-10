@@ -16,7 +16,7 @@ export const AuctionCard = ({ name, price, description }: Props) => {
     <Card>
       <CardContent>
         <Typography>{name}</Typography>
-        <Typography><i style={{ color: '#c0c0c0' }}>{description}</i></Typography>
+        <Typography><i style={{ color: 'cyan' }}>{description}</i></Typography>
         <Typography>$ {price}</Typography>
       </CardContent>
       <CardActions>
