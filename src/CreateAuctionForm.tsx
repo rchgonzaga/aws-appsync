@@ -91,6 +91,13 @@ export const CreateAuctionForm = () => {
                 margin="normal"
               />
               <br />
+              <TextField
+                name="description"
+                label="description"
+                value={values.description}
+                onChange={handleChange}
+                margin="normal"
+              />
               <Button type="submit" variant="contained">
                 Submit
               </Button>

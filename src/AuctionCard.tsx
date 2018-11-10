@@ -8,13 +8,15 @@ import Typography from "@material-ui/core/Typography";
 interface Props {
   name: string;
   price: number;
+  description: string;
 }
 
-export const AuctionCard = ({ name, price }: Props) => {
+export const AuctionCard = ({ name, price, description }: Props) => {
   return (
     <Card>
       <CardContent>
         <Typography>{name}</Typography>
+        <Typography>$ {description}</Typography>
         <Typography>$ {price}</Typography>
       </CardContent>
       <CardActions>

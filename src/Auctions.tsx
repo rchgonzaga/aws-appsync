@@ -33,7 +33,7 @@ export const Auctions = () => {
             }}
           >
             {data.listAuctions.items.map(x => (
-              <AuctionCard name={x!.name} price={x!.price} key={x!.id} />
+              <AuctionCard name={x!.name} price={x!.price} description="aaa" key={x!.id} />
             ))}
           </div>
         );
