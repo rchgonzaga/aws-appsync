@@ -38,7 +38,8 @@ export const CreateAuctionForm = () => {
               variables: {
                 input: {
                   name,
-                  price
+                  price,
+                  description
                 }
               },
               optimisticResponse: {

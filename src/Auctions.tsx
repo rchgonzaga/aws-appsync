@@ -32,9 +32,15 @@ export const Auctions = () => {
               gridGap: 10
             }}
           >
-            {data.listAuctions.items.map(x => (
-              <AuctionCard name={x!.name} price={x!.price} description="aaa" key={x!.id} />
-            ))}
+            {data.listAuctions.items.map(x => {
+
+              let test = x!.description
+              test = test ? test : '-- no description --'
+              return (
+                <AuctionCard name={x!.name} price={x!.price} description={test} key={x!.id} />
+              )
+            }
+            )}
           </div>
         );
       }}
